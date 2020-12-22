@@ -3,7 +3,7 @@ import './App.css';
 
 export class App extends Component {
   constructor() {
-    super()
+    super();
     this.canvasRef = React.createRef();
     this.initialDate = new Date(2020, 0, 1);
     this.initialPos = [(3 / 2) * Math.PI - 0.2, 0, Math.PI / 2 + 0.2, (5 / 4) * Math.PI, (3 / 2) * Math.PI, (3 / 2) * Math.PI + 0.4, Math.PI / 4, -0.2];
@@ -359,6 +359,40 @@ export class App extends Component {
     return (
       <div className="App">
         <canvas ref={this.canvasRef} height={this.state.height} width={this.state.width}> </canvas>
+        <div className="Legend">
+          <div className="LegendComponent">
+            <span className="LegendColour" style={{ backgroundColor: "orange"}}/>
+            Mercury
+          </div>
+          <div className="LegendComponent">
+            <span className="LegendColour" style={{ backgroundColor: "#eb6e6e"}}/>
+            Venus
+          </div>
+          <div className="LegendComponent">
+            <span className="LegendColour" style={{ backgroundColor: "blue"}}/>
+            Earth
+          </div>
+          <div className="LegendComponent">
+            <span className="LegendColour" style={{ backgroundColor: "red"}}/>
+            Mars
+          </div>
+          <div className="LegendComponent">
+            <span className="LegendColour" style={{ backgroundColor: "pink"}}/>
+            Jupiter
+          </div>
+          <div className="LegendComponent">
+            <span className="LegendColour" style={{ backgroundColor: "magenta"}}/>
+            Saturn
+          </div>
+          <div className="LegendComponent">
+            <span className="LegendColour" style={{ backgroundColor: "turquoise"}}/>
+            Uranus
+          </div>
+          <div className="LegendComponent">
+            <span className="LegendColour" style={{ backgroundColor: "#6aa3e6"}}/>
+            Neptune
+          </div>
+        </div>
         <div className="Sidebar">
         <h3> Hohmann Transfer Orbit Flight Simulator </h3>
           Date:
